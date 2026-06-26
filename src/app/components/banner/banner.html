@@ -1,16 +1,11 @@
-<div class="banner flex items-center h-full min-h-0 rounded-3xl overflow-hidden relative">
-    <div class="banner__placeholder" [class.banner__placeholder--hidden]="videoReady()" aria-hidden="true"></div>
-
+<div class="flex items-center h-full min-h-0 rounded-3xl overflow-hidden relative">
     <video
         #video
         src="video.mp4"
         autoplay
         muted
         playsinline
-        preload="auto"
-        fetchpriority="high"
-        class="banner__video absolute inset-0 w-full h-full object-cover"
-        [class.banner__video--ready]="videoReady()"
+        class="absolute inset-0 w-full h-full object-cover"
         (timeupdate)="onTimeUpdate(video)"
     ></video>
 
