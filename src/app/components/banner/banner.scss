@@ -5,6 +5,32 @@
   min-height: 0;
 }
 
+.banner__placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background:
+    radial-gradient(circle at 20% 20%, rgb(var(--color-brand-rgb) / 0.22), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgb(var(--color-brand-rgb) / 0.12), transparent 40%),
+    linear-gradient(160deg, #0a0d12 0%, #121820 45%, #0a0d12 100%);
+  opacity: 1;
+  transition: opacity 0.6s ease;
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.banner__video {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+
+  &--ready {
+    opacity: 1;
+  }
+}
+
 .slogan h1,
 .banner__title {
   font-size: clamp(2rem, 6vw, 4.5rem);
