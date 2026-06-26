@@ -6,12 +6,128 @@
   --color-brand: #40c0e0;
 }
 
+html.light {
+  color-scheme: light;
+
+  --color-brand: #40c0e0;
+  --color-brand-hover: #2aa8c9;
+  --color-brand-muted: #1a6f82;
+  --color-brand-soft: #2d8fa3;
+  --color-brand-rgb: 64 192 224;
+
+  --color-bg: #eef1f5;
+  --color-text: #0f1419;
+  --color-text-strong: #0f1419;
+  --color-text-muted: rgba(15, 20, 25, 0.68);
+  --color-text-faint: rgba(15, 20, 25, 0.5);
+  --color-text-on-media: #ffffff;
+
+  --color-panel: #ffffff;
+  --color-panel-border: rgba(0, 0, 0, 0.08);
+  --color-panel-glass: rgba(0, 0, 0, 0.02);
+  --color-panel-glass-hover: rgba(0, 0, 0, 0.04);
+
+  --color-surface-inset: #f4f6f9;
+  --color-surface-gallery: #eef1f5;
+  --color-surface-stage: #e4e9ef;
+  --color-surface-modal: #ffffff;
+  --color-surface-modal-gallery: #f3f5f8;
+
+  --color-grid-line: rgba(0, 0, 0, 0.06);
+  --color-orb-a: rgba(64, 192, 224, 0.16);
+  --color-orb-b: rgba(64, 192, 224, 0.08);
+
+  --color-logo-wrap: #ffffff;
+  --color-chip-text: #1a6f82;
+  --color-nav-hover: rgba(0, 0, 0, 0.05);
+  --color-backdrop: rgba(15, 20, 25, 0.45);
+  --color-backdrop-heavy: rgba(15, 20, 25, 0.72);
+  --color-overlay-badge: rgba(15, 20, 25, 0.55);
+  --color-control-bg: rgba(255, 255, 255, 0.9);
+  --color-control-border: rgba(0, 0, 0, 0.1);
+  --color-divider: rgba(0, 0, 0, 0.12);
+  --color-scrollbar: rgba(64, 192, 224, 0.45);
+  --color-on-brand: #0a0a0a;
+  --color-hero-overlay: rgba(0, 0, 0, 0.55);
+  --color-hero-glass: rgba(255, 255, 255, 0.12);
+  --color-hero-glass-border: rgba(255, 255, 255, 0.2);
+  --color-hero-glass-hover: rgba(255, 255, 255, 0.18);
+  --color-hero-index: rgba(255, 255, 255, 0.2);
+  --color-hero-hint: rgba(255, 255, 255, 0.65);
+  --color-hero-arrow: rgba(255, 255, 255, 0.45);
+  --color-panel-number: rgba(64, 192, 224, 0.14);
+  --color-brand-border: rgba(64, 192, 224, 0.35);
+  --color-brand-surface: rgba(64, 192, 224, 0.1);
+  --color-brand-surface-strong: rgba(64, 192, 224, 0.14);
+  --color-brand-shadow: rgba(64, 192, 224, 0.35);
+  --color-logo-shadow: rgba(64, 192, 224, 0.35);
+}
+
+html.dark {
+  color-scheme: dark;
+
+  --color-brand: #40c0e0;
+  --color-brand-hover: #5ccce6;
+  --color-brand-muted: #b8eaf5;
+  --color-brand-soft: #8fd4e8;
+  --color-brand-rgb: 64 192 224;
+
+  --color-bg: #07090d;
+  --color-text: #f4f7fb;
+  --color-text-strong: #ffffff;
+  --color-text-muted: rgba(244, 247, 251, 0.72);
+  --color-text-faint: rgba(244, 247, 251, 0.5);
+  --color-text-on-media: #ffffff;
+
+  --color-panel: #0a0d12;
+  --color-panel-border: rgba(255, 255, 255, 0.08);
+  --color-panel-glass: rgba(255, 255, 255, 0.03);
+  --color-panel-glass-hover: rgba(255, 255, 255, 0.05);
+
+  --color-surface-inset: #0f1319;
+  --color-surface-gallery: #080b10;
+  --color-surface-stage: #151a22;
+  --color-surface-modal: #0f1319;
+  --color-surface-modal-gallery: #080b10;
+
+  --color-grid-line: rgba(255, 255, 255, 0.04);
+  --color-orb-a: rgba(64, 192, 224, 0.28);
+  --color-orb-b: rgba(64, 192, 224, 0.16);
+
+  --color-logo-wrap: #ffffff;
+  --color-chip-text: #b8eaf5;
+  --color-nav-hover: rgba(255, 255, 255, 0.06);
+  --color-backdrop: rgba(4, 6, 10, 0.82);
+  --color-backdrop-heavy: rgba(0, 0, 0, 0.5);
+  --color-overlay-badge: rgba(0, 0, 0, 0.55);
+  --color-control-bg: rgba(0, 0, 0, 0.45);
+  --color-control-border: rgba(255, 255, 255, 0.12);
+  --color-divider: rgba(255, 255, 255, 0.14);
+  --color-scrollbar: rgba(64, 192, 224, 0.35);
+  --color-on-brand: #0a0a0a;
+  --color-hero-overlay: rgba(0, 0, 0, 0.8);
+  --color-hero-glass: rgba(255, 255, 255, 0.06);
+  --color-hero-glass-border: rgba(255, 255, 255, 0.12);
+  --color-hero-glass-hover: rgba(255, 255, 255, 0.1);
+  --color-hero-index: rgba(255, 255, 255, 0.12);
+  --color-hero-hint: rgba(255, 255, 255, 0.5);
+  --color-hero-arrow: rgba(255, 255, 255, 0.35);
+  --color-panel-number: rgba(64, 192, 224, 0.12);
+  --color-brand-border: rgba(64, 192, 224, 0.35);
+  --color-brand-surface: rgba(64, 192, 224, 0.08);
+  --color-brand-surface-strong: rgba(64, 192, 224, 0.14);
+  --color-brand-shadow: rgba(64, 192, 224, 0.5);
+  --color-logo-shadow: rgba(64, 192, 224, 0.8);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
   font-family:
     system-ui,
     -apple-system,
@@ -19,6 +135,9 @@ body {
     'Segoe UI',
     Roboto,
     sans-serif;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .page-content {

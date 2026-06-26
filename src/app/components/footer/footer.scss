@@ -12,13 +12,13 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: #0a0a0a;
+  color: var(--color-text);
 }
 
 .contact-dock__divider {
   width: 1px;
   height: 1rem;
-  background: rgba(0, 0, 0, 0.15);
+  background: var(--color-divider);
   flex-shrink: 0;
 }
 

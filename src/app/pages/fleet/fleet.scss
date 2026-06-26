@@ -12,8 +12,11 @@
   flex-direction: column;
   overflow: hidden;
   border-radius: 1.5rem;
-  background: #0a0d12;
-  color: #f4f7fb;
+  background: var(--color-panel);
+  color: var(--color-text);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .fleet__backdrop {
@@ -27,8 +30,8 @@
   inset: 0;
   opacity: 0.35;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(circle at center, black 30%, transparent 85%);
 }
@@ -43,7 +46,7 @@
     right: 10%;
     width: 280px;
     height: 280px;
-    background: rgba(64, 192, 224, 0.2);
+    background: var(--color-orb-a);
   }
 
   &--right {
@@ -51,7 +54,7 @@
     bottom: -80px;
     width: 340px;
     height: 340px;
-    background: rgba(64, 192, 224, 0.12);
+    background: var(--color-orb-b);
   }
 }
 
@@ -90,7 +93,7 @@
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #40c0e0;
+  color: var(--color-brand);
 }
 
 .fleet__title {
@@ -98,14 +101,14 @@
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   line-height: 1.1;
-  color: #ffffff;
+  color: var(--color-text-strong);
   animation-delay: 0.08s;
 }
 
 .fleet__subtitle {
   font-size: 1rem;
   line-height: 1.7;
-  color: rgba(244, 247, 251, 0.68);
+  color: var(--color-text-muted);
   animation-delay: 0.16s;
 }
 
@@ -114,7 +117,7 @@
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: rgba(64, 192, 224, 0.85);
+  color: rgb(var(--color-brand-rgb) / 0.85);
   animation-delay: 0.24s;
 }
 
@@ -127,7 +130,7 @@
   padding-right: 0.25rem;
   padding-bottom: 1.5rem;
   scrollbar-width: thin;
-  scrollbar-color: rgba(64, 192, 224, 0.35) transparent;
+  scrollbar-color: var(--color-scrollbar) transparent;
 
   &::-webkit-scrollbar {
     width: 4px;
@@ -139,7 +142,7 @@
 
   &::-webkit-scrollbar-thumb {
     border-radius: 9999px;
-    background: rgba(64, 192, 224, 0.35);
+    background: var(--color-scrollbar);
   }
 }
 

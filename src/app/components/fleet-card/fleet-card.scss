@@ -4,8 +4,8 @@
   cursor: pointer;
   overflow: hidden;
   border-radius: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-panel-border);
+  background: var(--color-panel-glass);
   text-align: left;
   color: inherit;
   opacity: 0;
@@ -24,20 +24,20 @@
 
   &:hover {
     transform: translateY(-4px);
-    border-color: rgba(64, 192, 224, 0.45);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 24px 48px -32px rgba(64, 192, 224, 0.5);
+    border-color: var(--color-brand-border);
+    background: var(--color-panel-glass-hover);
+    box-shadow: 0 24px 48px -32px var(--color-brand-shadow);
 
     .fleet-card__cta {
       transform: translateX(4px);
-      color: #40c0e0;
+      color: var(--color-brand);
     }
   }
 
   &--selected {
-    border-color: rgba(64, 192, 224, 0.6);
-    background: rgba(64, 192, 224, 0.08);
-    box-shadow: 0 0 0 1px rgba(64, 192, 224, 0.25);
+    border-color: rgb(var(--color-brand-rgb) / 0.6);
+    background: var(--color-brand-surface);
+    box-shadow: 0 0 0 1px rgb(var(--color-brand-rgb) / 0.25);
   }
 }
 
@@ -76,15 +76,15 @@
 .fleet-card__capacity {
   bottom: 0.75rem;
   left: 0.75rem;
-  background: rgba(64, 192, 224, 0.92);
-  color: #0a0a0a;
+  background: rgb(var(--color-brand-rgb) / 0.92);
+  color: var(--color-on-brand);
 }
 
 .fleet-card__year {
   top: 0.75rem;
   right: 0.75rem;
-  background: rgba(0, 0, 0, 0.55);
-  color: #ffffff;
+  background: var(--color-overlay-badge);
+  color: var(--color-text-on-media);
 }
 
 .fleet-card__body {
@@ -106,7 +106,7 @@
   font-size: clamp(1.15rem, 2vw, 1.45rem);
   font-weight: 800;
   line-height: 1.2;
-  color: #ffffff;
+  color: var(--color-text-strong);
 }
 
 .fleet-card__cta {
@@ -117,8 +117,8 @@
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-panel-border);
+  color: var(--color-text-faint);
   transition:
     transform 0.3s ease,
     color 0.3s ease,
@@ -128,7 +128,7 @@
 .fleet-card__description {
   font-size: 0.92rem;
   line-height: 1.65;
-  color: rgba(244, 247, 251, 0.68);
+  color: var(--color-text-muted);
 }
 
 .fleet-card__features {
@@ -141,19 +141,19 @@
 
   li {
     border-radius: 9999px;
-    border: 1px solid rgba(64, 192, 224, 0.25);
-    background: rgba(64, 192, 224, 0.08);
+    border: 1px solid var(--color-brand-border);
+    background: var(--color-brand-surface);
     padding: 0.3rem 0.7rem;
     font-size: 0.7rem;
     font-weight: 600;
-    color: #8fd4e8;
+    color: var(--color-brand-soft);
   }
 }
 
 .fleet-card__features-more {
-  border-color: rgba(255, 255, 255, 0.15) !important;
-  background: rgba(255, 255, 255, 0.06) !important;
-  color: rgba(255, 255, 255, 0.55) !important;
+  border-color: var(--color-panel-border) !important;
+  background: var(--color-panel-glass) !important;
+  color: var(--color-text-faint) !important;
 }
 
 @keyframes fleet-card-in {

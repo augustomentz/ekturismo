@@ -5,7 +5,15 @@
   <title>EK Turismo</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    (function () {
+      var stored = localStorage.getItem('ek-theme');
+      var theme = stored === 'light' || stored === 'dark' ? stored : 'light';
+      document.documentElement.classList.add(theme);
+    })();
+  </script>
 </head>
 <body>
   <app-root></app-root>
