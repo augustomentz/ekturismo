@@ -67,7 +67,9 @@
 
             <div class="fleet-detail__meta">
                 <span>{{ vehicle().capacity }} lugares</span>
-                <span>{{ vehicle().year }}</span>
+                @if (vehicle().year) {
+                    <span>{{ vehicle().year }}</span>
+                }
                 <span>{{ vehicle().images.length }} fotos</span>
             </div>
 
