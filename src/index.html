@@ -14,19 +14,6 @@
       document.documentElement.classList.add(theme);
     })();
   </script>
-  <script>
-    (function () {
-      var path = location.pathname.replace(/\/$/, '') || '/';
-      if (path !== '/') return;
-
-      var link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'video';
-      link.href = 'video.mp4';
-      link.type = 'video/mp4';
-      document.head.appendChild(link);
-    })();
-  </script>
 </head>
 <body>
   <app-root></app-root>
