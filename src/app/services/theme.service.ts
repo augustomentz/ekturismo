@@ -21,7 +21,7 @@ export class ThemeService {
 
   private readInitialTheme(): Theme {
     if (typeof window === 'undefined') {
-      return 'light';
+      return 'dark';
     }
 
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -30,7 +30,7 @@ export class ThemeService {
       return stored;
     }
 
-    return 'light';
+    return 'dark';
   }
 
   private applyTheme(theme: Theme): void {
