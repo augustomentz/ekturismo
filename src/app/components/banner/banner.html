@@ -1,0 +1,21 @@
+<div class="flex items-center h-[calc(100vh-102px)] rounded-3xl overflow-hidden relative">
+    <video
+        #video
+        src="video.mp4"
+        autoplay
+        [muted]="true"
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+        (timeupdate)="onTimeUpdate(video)"
+    ></video>
+
+    <div class="layer absolute inset-0 z-10 bg-black/80"></div>
+
+    <div class="slogan absolute inset-0 z-20 flex items-center justify-center px-6 text-center pointer-events-none">
+        <h1 class="text-white font-bold leading-tight">
+            <span class="slogan-word">Sonhe,</span>
+            <span class="slogan-word">Planeje e</span>
+            <span class="slogan-word slogan-word--accent">Embarque.</span>
+        </h1>
+    </div>
+</div>
