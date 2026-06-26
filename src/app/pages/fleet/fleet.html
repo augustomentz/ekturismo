@@ -1,0 +1,34 @@
+<section class="fleet">
+  <div class="fleet__backdrop" aria-hidden="true">
+    <div class="fleet__grid-lines"></div>
+    <div class="fleet__orb fleet__orb--left"></div>
+    <div class="fleet__orb fleet__orb--right"></div>
+  </div>
+
+  <div class="fleet__inner">
+    <header class="fleet__header">
+      <h1 class="fleet__title">Nossa frota</h1>
+      <p class="fleet__subtitle">
+        Veículos revisados e equipados para garantir conforto, segurança e a melhor experiência em
+        cada trajeto. Toque em um veículo para ver fotos e detalhes.
+      </p>
+    </header>
+
+    <div class="fleet__scroll">
+      <div class="fleet__list">
+        @for (vehicle of vehicles; track vehicle.id; let i = $index) {
+          <app-fleet-card
+            [vehicle]="vehicle"
+            [cardIndex]="i"
+            [selected]="selectedVehicle()?.id === vehicle.id"
+            (select)="openDetail($event)"
+          />
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+@if (selectedVehicle(); as vehicle) {
+  <app-fleet-detail [vehicle]="vehicle" (closed)="closeDetail()" />
+}

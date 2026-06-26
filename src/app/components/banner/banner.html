@@ -1,4 +1,4 @@
-<div class="flex items-center h-[calc(100vh-102px)] rounded-3xl overflow-hidden relative">
+<div class="flex items-center h-full min-h-0 rounded-3xl overflow-hidden relative">
     <video
         #video
         src="video.mp4"
@@ -11,11 +11,31 @@
 
     <div class="layer absolute inset-0 z-10 bg-black/80"></div>
 
-    <div class="slogan absolute inset-0 z-20 flex items-center justify-center px-6 text-center pointer-events-none">
+    <div class="slogan absolute inset-0 z-20 flex flex-col items-center justify-center gap-10 px-6 text-center">
         <h1 class="text-white font-bold leading-tight">
             <span class="slogan-word">Sonhe,</span>
             <span class="slogan-word">Planeje e</span>
             <span class="slogan-word slogan-word--accent">Embarque.</span>
         </h1>
+
+        <nav class="hero-nav" aria-label="Navegação principal">
+            <a routerLink="/about-us" class="hero-nav__card" (click)="routeUi.anticipate('/about-us')">
+                <span class="hero-nav__index" aria-hidden="true">01</span>
+                <span class="hero-nav__content">
+                    <span class="hero-nav__label">Sobre nós</span>
+                    <span class="hero-nav__hint">Conheça nossa história</span>
+                </span>
+                <span class="hero-nav__arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a routerLink="/fleet" class="hero-nav__card hero-nav__card--accent" (click)="routeUi.anticipate('/fleet')">
+                <span class="hero-nav__index" aria-hidden="true">02</span>
+                <span class="hero-nav__content">
+                    <span class="hero-nav__label">Frota</span>
+                    <span class="hero-nav__hint">Veículos modernos</span>
+                </span>
+                <span class="hero-nav__arrow" aria-hidden="true">→</span>
+            </a>
+        </nav>
     </div>
 </div>

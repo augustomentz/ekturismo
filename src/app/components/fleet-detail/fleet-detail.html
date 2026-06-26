@@ -1,0 +1,86 @@
+<div class="fleet-detail__backdrop" (click)="closed.emit()" aria-hidden="true"></div>
+
+<dialog class="fleet-detail" open aria-modal="true" [attr.aria-label]="vehicle().name">
+    <button type="button" class="fleet-detail__close" (click)="closed.emit()" aria-label="Fechar">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+                d="M6 6l12 12M18 6L6 18"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+            />
+        </svg>
+    </button>
+
+    <div class="fleet-detail__layout">
+        <section class="fleet-detail__gallery">
+            <div class="fleet-detail__stage">
+                @for (image of vehicle().images; track image; let i = $index) {
+                    <img
+                        [src]="image"
+                        [alt]="vehicle().name + ' — foto ' + (i + 1)"
+                        class="fleet-detail__hero-image"
+                        [class.fleet-detail__hero-image--active]="activeImageIndex() === i"
+                    />
+                }
+
+                @if (vehicle().images.length > 1) {
+                    <button
+                        type="button"
+                        class="fleet-detail__nav fleet-detail__nav--prev"
+                        (click)="previousImage()"
+                        aria-label="Foto anterior"
+                    >
+                        ‹
+                    </button>
+                    <button
+                        type="button"
+                        class="fleet-detail__nav fleet-detail__nav--next"
+                        (click)="nextImage()"
+                        aria-label="Próxima foto"
+                    >
+                        ›
+                    </button>
+                }
+            </div>
+
+            @if (vehicle().images.length > 1) {
+                <div class="fleet-detail__thumbs">
+                    @for (image of vehicle().images; track image; let i = $index) {
+                        <button
+                            type="button"
+                            class="fleet-detail__thumb"
+                            [class.fleet-detail__thumb--active]="activeImageIndex() === i"
+                            (click)="selectImage(i)"
+                            [attr.aria-label]="'Ver foto ' + (i + 1)"
+                        >
+                            <img [src]="image" [alt]="" />
+                        </button>
+                    }
+                </div>
+            }
+        </section>
+
+        <section class="fleet-detail__info">
+            <p class="fleet-detail__eyebrow">Detalhes do veículo</p>
+            <h2 class="fleet-detail__title">{{ vehicle().name }}</h2>
+
+            <div class="fleet-detail__meta">
+                <span>{{ vehicle().capacity }} lugares</span>
+                <span>{{ vehicle().year }}</span>
+                <span>{{ vehicle().images.length }} fotos</span>
+            </div>
+
+            <p class="fleet-detail__description">{{ vehicle().longDescription }}</p>
+
+            <div class="fleet-detail__features">
+                <h3>Comodidades</h3>
+                <ul>
+                    @for (feature of vehicle().features; track feature) {
+                        <li>{{ feature }}</li>
+                    }
+                </ul>
+            </div>
+        </section>
+    </div>
+</dialog>

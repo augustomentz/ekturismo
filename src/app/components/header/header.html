@@ -1,8 +1,41 @@
-<div class="flex justify-between items-center">
-    <img src="logo_v2.png" alt="EK Turismo" class="max-w-[120px]">
+<header class="header">
+    <a
+        routerLink="/"
+        class="header__logo shrink-0 transition-opacity hover:opacity-80"
+        (click)="routeUi.anticipate('/')"
+    >
+        <img src="logo_v2.png" alt="EK Turismo" class="max-w-[120px]" />
+    </a>
 
-    <div class="flex justify-between gap-4">
-        <div>instagram</div>
-        <div>WPP</div>
-    </div>
-</div>
+    <nav
+        class="header-nav"
+        [class.header-nav--hidden]="routeUi.isHome()"
+        aria-label="Navegação principal"
+    >
+        <a
+            routerLink="/"
+            routerLinkActive="nav-link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="nav-link"
+            (click)="routeUi.anticipate('/')"
+        >
+            Início
+        </a>
+        <a
+            routerLink="/about-us"
+            routerLinkActive="nav-link--active"
+            class="nav-link"
+            (click)="routeUi.anticipate('/about-us')"
+        >
+            Sobre nós
+        </a>
+        <a
+            routerLink="/fleet"
+            routerLinkActive="nav-link--active"
+            class="nav-link"
+            (click)="routeUi.anticipate('/fleet')"
+        >
+            Frota
+        </a>
+    </nav>
+</header>

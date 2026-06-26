@@ -1,3 +1,135 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+@theme {
+  --color-brand: #40c0e0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
+
+.page-content {
+  view-transition-name: page-content;
+}
+
+.app-shell {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100dvh;
+  overflow: hidden;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.app-shell__header {
+  display: block;
+  min-height: 0;
+}
+
+.app-shell__content {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.app-shell__page {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.app-shell__page > :not(router-outlet) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.app-shell__footer {
+  display: block;
+  min-height: 0;
+}
+
+html.fleet-scroll-mode,
+html.fleet-scroll-mode body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html.fleet-scroll-mode main {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100dvh;
+  overflow: hidden;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+html.fleet-scroll-mode .app-shell__content,
+html.fleet-scroll-mode .app-shell__page {
+  min-height: 0;
+  overflow: hidden;
+}
+
+::view-transition-old(root),
+::view-transition-new(root),
+::view-transition-old(site-header),
+::view-transition-new(site-header) {
+  animation: none;
+}
+
+::view-transition-group(site-header) {
+  animation-duration: 0s;
+}
+
+::view-transition-old(page-content) {
+  animation: page-out 0.55s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+::view-transition-new(page-content) {
+  animation: page-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes page-out {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(-56px);
+    filter: blur(8px);
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: scale(1.08) translateY(72px);
+    filter: blur(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}

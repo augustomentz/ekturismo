@@ -1,0 +1,43 @@
+<button
+    type="button"
+    class="fleet-card"
+    [class.fleet-card--selected]="selected()"
+    [style.animation-delay]="cardIndex() * 100 + 200 + 'ms'"
+    (click)="select.emit(vehicle())"
+>
+    <div class="fleet-card__media">
+        <img [src]="vehicle().image" [alt]="vehicle().name" class="fleet-card__image" />
+        <span class="fleet-card__capacity">{{ vehicle().capacity }} lugares</span>
+        @if (vehicle().year){
+            <span class="fleet-card__year">{{ vehicle().year }}</span>
+        }
+    </div>
+
+    <div class="fleet-card__body">
+        <div class="fleet-card__header">
+            <h3 class="fleet-card__title">{{ vehicle().name }}</h3>
+            <span class="fleet-card__cta" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M4 10h12M11 5l5 5-5 5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </span>
+        </div>
+
+        <p class="fleet-card__description">{{ vehicle().description }}</p>
+
+        <ul class="fleet-card__features">
+            @for (feature of vehicle().features.slice(0, 3); track feature) {
+                <li>{{ feature }}</li>
+            }
+            @if (vehicle().features.length > 3) {
+                <li class="fleet-card__features-more">+{{ vehicle().features.length - 3 }}</li>
+            }
+        </ul>
+    </div>
+</button>

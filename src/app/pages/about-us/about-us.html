@@ -1,0 +1,54 @@
+<section class="about">
+  <div class="about__backdrop" aria-hidden="true">
+    <div class="about__grid-lines"></div>
+    <div class="about__orb about__orb--left"></div>
+    <div class="about__orb about__orb--right"></div>
+  </div>
+
+  <div class="about__layout">
+    <aside class="about__intro">
+      <p class="about__eyebrow">Sobre nós</p>
+
+      <div class="about__logo-wrap">
+        <img src="logo_v2.png" alt="EK Turismo" class="about__logo" />
+      </div>
+
+      <p class="about__lead">
+        Somos uma empresa familiar especializada em turismo, transporte e fretamento.
+      </p>
+
+      <p class="about__body">
+        Com uma frota moderna e equipe dedicada, garantimos segurança, conforto e pontualidade em
+        cada viagem.
+      </p>
+
+      <p class="about__cta">Viaje com quem cuida de cada detalhe para você!</p>
+
+      <ul class="about__tags" aria-label="Áreas de atuação">
+        <li>Turismo</li>
+        <li>Fretamento</li>
+        <li>Transporte</li>
+      </ul>
+    </aside>
+
+    <div class="about__story">
+      @for (block of blocks; track block.label; let i = $index) {
+        <article
+          class="about__panel"
+          [class.about__panel--featured]="i === 0"
+          [style.animation-delay]="i * 140 + 250 + 'ms'"
+        >
+          <span class="about__panel-number" aria-hidden="true">{{ block.label }}</span>
+
+          <div class="about__panel-inner">
+            <p class="about__panel-accent">{{ block.accent }}</p>
+            <h2 class="about__panel-title">{{ block.title }}</h2>
+            <p class="about__panel-text">{{ block.description }}</p>
+          </div>
+
+          <div class="about__panel-line" aria-hidden="true"></div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
