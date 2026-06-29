@@ -1,5 +1,10 @@
 <footer class="footer">
-    <div class="contact-dock" aria-label="Canais de contato">
+    <div class="footer__inner">
+        <p class="footer__cta">Solicite seu orçamento!</p>
+
+        <span class="contact-dock__divider" aria-hidden="true"></span>
+
+        <div class="contact-dock" aria-label="Canais de contato">
         <a
             [href]="contact.instagram"
             target="_blank"
@@ -31,5 +36,6 @@
             </svg>
             <span>{{ contact.phoneDisplay }}</span>
         </a>
+        </div>
     </div>
 </footer>

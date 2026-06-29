@@ -86,12 +86,21 @@
 }
 
 .about__eyebrow {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--color-brand);
+}
+
+.about__title {
+  margin-bottom: 1.25rem;
+  max-width: 28rem;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-text-strong);
 }
 
 .about__logo-wrap {
@@ -162,7 +171,7 @@
   gap: 0.9rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     gap: 1rem;
   }
@@ -174,7 +183,7 @@
   border-radius: 1.25rem;
   border: 1px solid var(--color-panel-border);
   background: var(--color-panel-glass);
-  padding: 1.35rem 1.35rem 1.5rem;
+  padding: 1.75rem 1.75rem 2rem;
   backdrop-filter: blur(12px);
   opacity: 0;
   transform: translateY(28px);
@@ -206,28 +215,13 @@
       transform: scaleX(1);
     }
   }
-
-  &--featured {
-    @media (min-width: 768px) {
-      grid-column: 1 / -1;
-      padding: 1.75rem 1.75rem 2rem;
-    }
-
-    .about__panel-title {
-      font-size: clamp(1.75rem, 3vw, 2.5rem);
-    }
-
-    .about__panel-number {
-      font-size: clamp(4rem, 8vw, 6rem);
-    }
-  }
 }
 
 .about__panel-number {
   position: absolute;
   top: 0.5rem;
   right: 1rem;
-  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-size: clamp(4rem, 8vw, 6rem);
   font-weight: 800;
   line-height: 1;
   color: var(--color-panel-number);
@@ -250,7 +244,7 @@
 
 .about__panel-title {
   margin-bottom: 0.75rem;
-  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   line-height: 1.1;
   color: var(--color-text-strong);

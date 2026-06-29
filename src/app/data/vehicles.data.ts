@@ -3,7 +3,8 @@ import { Vehicle } from '../models/vehicle';
 export const VEHICLES: Vehicle[] = [
   {
     id: '1',
-    name: 'Volvo G7',
+    slug: 'volvo-g7',
+    name: 'Volvo G7 2012',
     image: 'fleet/volvo_g7/volvo_g7_1.jpg',
     images: [
       'fleet/volvo_g7/volvo_g7_1.jpg',
@@ -29,7 +30,8 @@ export const VEHICLES: Vehicle[] = [
   },
   {
     id: '2',
-    name: 'Van Executiva',
+    slug: 'van-executiva',
+    name: 'Van Executiva 2026',
     image: 'fleet/van_exec/van_exec_1.jpg',
     images: [
       'fleet/van_exec/van_exec_1.jpg',
@@ -38,7 +40,7 @@ export const VEHICLES: Vehicle[] = [
       'fleet/van_exec/van_exec_4.jpg',
     ],
     description:
-      'Van executiva ideal para pequenos grupos e translados.',
+      'Van Executiva com excelente conforto para viagens e fretamentos.',
     longDescription:
       'A Van Executiva 2026 é indicada para viagens executivas, receptivos e traslados, oferecendo conforto e tecnologia para grupos reduzidos.',
     capacity: 15,
@@ -53,7 +55,8 @@ export const VEHICLES: Vehicle[] = [
   },
   {
     id: '3',
-    name: 'Sprinter Executiva',
+    slug: 'sprinter-executiva',
+    name: 'Sprinter Executiva 2017',
     image: 'fleet/sprinter_exec/sprinter_exec_1.jpg',
     images: [
       'fleet/sprinter_exec/sprinter_exec_1.jpg',
@@ -77,7 +80,8 @@ export const VEHICLES: Vehicle[] = [
   },
   {
     id: '4',
-    name: 'Ônibus Truck',
+    slug: 'onibus-truck',
+    name: 'Ônibus Truck 2004',
     image: 'fleet/truck_2004/truck_2004_1.jpg',
     images: [
       'fleet/truck_2004/truck_2004_1.jpg',
@@ -101,7 +105,8 @@ export const VEHICLES: Vehicle[] = [
   },
   {
     id: '5',
-    name: 'Micro Ônibus Semi Leito',
+    slug: 'micro-onibus-semi-leito',
+    name: 'Micro Ônibus Semi Leito 2014',
     image: 'fleet/micro_semi/micro_semi_1.jpg',
     images: [
       'fleet/micro_semi/micro_semi_1.jpg',
@@ -110,7 +115,7 @@ export const VEHICLES: Vehicle[] = [
       'fleet/micro_semi/micro_semi_4.jpg',
     ],
     description:
-      'Micro ônibus semi leito para excursões e viagens regionais.',
+      'Micro ônibus semi leito para excursões e viagens.',
     longDescription:
       'Ideal para grupos médios, oferecendo conforto com poltronas semi leito, climatização e estrutura completa para passeios e turismo.',
     capacity: 24,
@@ -124,6 +129,7 @@ export const VEHICLES: Vehicle[] = [
   },
   {
     id: '6',
+    slug: 'sprinter-03',
     name: 'Sprinter 03',
     image: 'fleet/sprinter/sprinter_1.jpg',
     images: [
@@ -145,6 +151,7 @@ export const VEHICLES: Vehicle[] = [
   },
   {
     id: '7',
+    slug: 'micro-onibus-05',
     name: 'Micro Ônibus 05',
     image: 'fleet/micro_05/micro_05_1.jpg',
     images: [
@@ -166,6 +173,7 @@ export const VEHICLES: Vehicle[] = [
   },
   {
     id: '8',
+    slug: 'onibus-busscar-01',
     name: 'Ônibus Busscar 01',
     image: 'fleet/busscar/busscar_1.jpg',
     images: [
@@ -188,6 +196,7 @@ export const VEHICLES: Vehicle[] = [
   },
   {
     id: '9',
+    slug: 'onibus-viale-04',
     name: 'Ônibus Viale 04',
     image: 'fleet/viale/viale_1.jpg',
     images: [
@@ -210,6 +219,7 @@ export const VEHICLES: Vehicle[] = [
   },
   {
     id: '10',
+    slug: 'onibus-escolar-02',
     name: 'Ônibus Escolar 02',
     image: 'fleet/escolar/escolar_1.jpg',
     images: [
@@ -229,3 +239,7 @@ export const VEHICLES: Vehicle[] = [
     ],
   },
 ];
+
+export function findVehicleBySlug(slug: string): Vehicle | undefined {
+  return VEHICLES.find((vehicle) => vehicle.slug === slug);
+}

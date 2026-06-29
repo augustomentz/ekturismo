@@ -54,7 +54,10 @@
                             (click)="selectImage(i)"
                             [attr.aria-label]="'Ver foto ' + (i + 1)"
                         >
-                            <img [src]="image" [alt]="" />
+                            <img
+                                [src]="image"
+                                [alt]="vehicle().name + ' — miniatura foto ' + (i + 1)"
+                            />
                         </button>
                     }
                 </div>

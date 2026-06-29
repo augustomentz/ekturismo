@@ -8,6 +8,23 @@
   padding-top: .75rem;
 }
 
+.footer__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__cta {
+  margin: 0;
+  color: var(--color-brand);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
 .contact-dock {
   display: flex;
   align-items: center;
@@ -56,6 +73,10 @@
 }
 
 @media (max-width: 640px) {
+  .footer__inner {
+    gap: 0.75rem;
+  }
+
   .contact-dock {
     gap: 0.75rem;
   }

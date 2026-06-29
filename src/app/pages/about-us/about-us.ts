@@ -24,13 +24,6 @@ export class AboutUsPage {
     },
     {
       label: '02',
-      title: 'Nossa Origem',
-      description:
-        'A EK Turismo foi fundada em 2000 pelo Sr. Ademir Kern, com o compromisso de oferecer transporte seguro e de qualidade.',
-      accent: '2000 · 26 anos de experiência',
-    },
-    {
-      label: '03',
       title: 'Nosso Compromisso',
       description:
         'Com frota moderna e equipe dedicada, garantimos segurança, conforto e pontualidade em cada viagem.',

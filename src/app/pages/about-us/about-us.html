@@ -9,6 +9,8 @@
     <aside class="about__intro">
       <p class="about__eyebrow">Sobre nós</p>
 
+      <h1 class="about__title">EK Turismo — turismo, transporte e fretamento</h1>
+
       <div class="about__logo-wrap">
         <img src="logo_v2.png" alt="EK Turismo" class="about__logo" />
       </div>
@@ -35,7 +37,6 @@
       @for (block of blocks; track block.label; let i = $index) {
         <article
           class="about__panel"
-          [class.about__panel--featured]="i === 0"
           [style.animation-delay]="i * 140 + 250 + 'ms'"
         >
           <span class="about__panel-number" aria-hidden="true">{{ block.label }}</span>

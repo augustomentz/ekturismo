@@ -1,0 +1,13 @@
+/
+/about-us
+/fleet
+/fleet/volvo-g7
+/fleet/van-executiva
+/fleet/sprinter-executiva
+/fleet/onibus-truck
+/fleet/micro-onibus-semi-leito
+/fleet/sprinter-03
+/fleet/micro-onibus-05
+/fleet/onibus-busscar-01
+/fleet/onibus-viale-04
+/fleet/onibus-escolar-02
