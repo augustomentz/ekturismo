@@ -8,5 +8,5 @@ export interface Vehicle {
   longDescription: string;
   capacity: number;
   features: string[];
-  year: number | null;
+  year: number | string | null;
 }

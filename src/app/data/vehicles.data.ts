@@ -147,7 +147,7 @@ export const VEHICLES: Vehicle[] = [
     longDescription:
       'Indicada para fretamentos, viagens corporativas e traslados, oferecendo conforto e praticidade.',
     capacity: 15,
-    year: null,
+    year: '03',
     features: [
       'Bancos reclináveis',
       'Ar-condicionado',
@@ -169,7 +169,7 @@ export const VEHICLES: Vehicle[] = [
     longDescription:
       'Veículo compacto que alia conforto e praticidade para passeios, excursões e viagens de curta distância.',
     capacity: 27,
-    year: null,
+    year: '05',
     features: [
       'Ar-condicionado',
       'Bancos reclináveis',
@@ -191,7 +191,7 @@ export const VEHICLES: Vehicle[] = [
     longDescription:
       'Modelo Busscar com grande capacidade de passageiros, ideal para viagens rodoviárias, fretamentos e turismo.',
     capacity: 48,
-    year: null,
+    year: '01',
     features: [
       'Ônibus rodoviário',
       'Bancos reclináveis',
@@ -214,7 +214,7 @@ export const VEHICLES: Vehicle[] = [
     longDescription:
       'Veículo confortável e seguro para excursões, turismo e fretamentos em geral.',
     capacity: 45,
-    year: null,
+    year: '04',
     features: [
       'Ônibus rodoviário',
       'Bancos reclináveis',
@@ -237,7 +237,7 @@ export const VEHICLES: Vehicle[] = [
     longDescription:
       'Veículo com grande capacidade de passageiros e cintos de segurança, indicado para transporte escolar e serviços especiais.',
     capacity: 49,
-    year: null,
+    year: '02',
     features: [
       'Cintos de segurança',
     ],
