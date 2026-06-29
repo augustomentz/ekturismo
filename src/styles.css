@@ -144,6 +144,10 @@ body {
   view-transition-name: page-content;
 }
 
+html.nav-menu-open {
+  overflow: hidden;
+}
+
 .app-shell {
   box-sizing: border-box;
   display: grid;

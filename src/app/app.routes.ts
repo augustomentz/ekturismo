@@ -11,18 +11,32 @@ export const routes: Routes = [
     data: { seo: HOME_SEO },
   },
   {
-    path: 'about-us',
+    path: 'sobre-nos',
     component: AboutUsPage,
     data: { seo: ABOUT_SEO },
   },
   {
-    path: 'fleet/:slug',
+    path: 'frota/:slug',
     component: FleetPage,
   },
   {
-    path: 'fleet',
+    path: 'frota',
     component: FleetPage,
     data: { seo: FLEET_SEO },
+  },
+  {
+    path: 'about-us',
+    redirectTo: 'sobre-nos',
+    pathMatch: 'full',
+  },
+  {
+    path: 'fleet/:slug',
+    redirectTo: 'frota/:slug',
+  },
+  {
+    path: 'fleet',
+    redirectTo: 'frota',
+    pathMatch: 'full',
   },
   { path: '**', redirectTo: '' },
 ];

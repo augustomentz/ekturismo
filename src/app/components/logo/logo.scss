@@ -1,0 +1,15 @@
+:host {
+  display: contents;
+}
+
+.theme-logo--dark {
+  display: none;
+}
+
+:host-context(html.dark) .theme-logo--light {
+  display: none;
+}
+
+:host-context(html.dark) .theme-logo--dark {
+  display: block;
+}

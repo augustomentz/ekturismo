@@ -38,6 +38,7 @@ export const VEHICLES: Vehicle[] = [
       'fleet/van_exec/van_exec_2.jpg',
       'fleet/van_exec/van_exec_3.jpg',
       'fleet/van_exec/van_exec_4.jpg',
+      'fleet/van_exec/van_exec_5.jpg',
     ],
     description:
       'Van Executiva com excelente conforto para viagens e fretamentos.',
@@ -63,6 +64,8 @@ export const VEHICLES: Vehicle[] = [
       'fleet/sprinter_exec/sprinter_exec_2.jpg',
       'fleet/sprinter_exec/sprinter_exec_3.jpg',
       'fleet/sprinter_exec/sprinter_exec_4.jpg',
+      'fleet/sprinter_exec/sprinter_exec_5.jpg',
+      'fleet/sprinter_exec/sprinter_exec_6.jpg',
     ],
     description:
       'Sprinter executiva com excelente conforto para viagens e fretamentos.',
@@ -113,6 +116,7 @@ export const VEHICLES: Vehicle[] = [
       'fleet/micro_semi/micro_semi_2.jpg',
       'fleet/micro_semi/micro_semi_3.jpg',
       'fleet/micro_semi/micro_semi_4.jpg',
+      'fleet/micro_semi/micro_semi_5.jpg',
     ],
     description:
       'Micro ônibus semi leito para excursões e viagens.',

@@ -19,21 +19,21 @@ export const ABOUT_SEO: SeoRouteData = {
   title: 'Sobre nós | EK Turismo',
   description:
     'Conheça a EK Turismo: empresa familiar fundada em 2000, especializada em turismo, transporte e fretamento com frota moderna e equipe dedicada.',
-  path: '/about-us',
+  path: '/sobre-nos',
 };
 
 export const FLEET_SEO: SeoRouteData = {
   title: 'Frota | EK Turismo',
   description:
     'Conheça a frota da EK Turismo: ônibus leito, micro ônibus, vans e sprinters para excursões, fretamento e viagens corporativas.',
-  path: '/fleet',
+  path: '/frota',
 };
 
 export function vehicleSeo(vehicle: Vehicle): SeoRouteData {
   return {
     title: `${vehicle.name} | Frota | EK Turismo`,
     description: vehicle.description,
-    path: `/fleet/${vehicle.slug}`,
+    path: `/frota/${vehicle.slug}`,
     image: vehicle.image,
   };
 }

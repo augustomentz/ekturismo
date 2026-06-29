@@ -38,7 +38,7 @@ export class FleetPage implements OnInit, OnDestroy {
       const vehicle = findVehicleBySlug(slug);
 
       if (!vehicle) {
-        void this.router.navigate(['/fleet']);
+        void this.router.navigate(['/frota']);
         return;
       }
 
@@ -56,10 +56,10 @@ export class FleetPage implements OnInit, OnDestroy {
   }
 
   openDetail(vehicle: Vehicle): void {
-    void this.router.navigate(['/fleet', vehicle.slug]);
+    void this.router.navigate(['/frota', vehicle.slug]);
   }
 
   closeDetail(): void {
-    void this.router.navigate(['/fleet']);
+    void this.router.navigate(['/frota']);
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Logo } from '../../components/logo/logo';
 
 interface AboutBlock {
   label: string;
@@ -9,7 +10,7 @@ interface AboutBlock {
 
 @Component({
   selector: 'app-about-us-page',
-  imports: [],
+  imports: [Logo],
   templateUrl: './about-us.html',
   styleUrl: './about-us.scss',
 })

@@ -2,9 +2,9 @@
     <a
         routerLink="/"
         class="header__logo shrink-0 transition-opacity hover:opacity-80"
-        (click)="routeUi.anticipate('/')"
+        (click)="navigate('/')"
     >
-        <img src="logo_v2.png" alt="EK Turismo" class="max-w-[120px]" />
+        <app-logo imgClass="max-w-[120px]" [width]="120" [height]="19" />
     </a>
 
     <nav
@@ -17,50 +17,103 @@
             routerLinkActive="nav-link--active"
             [routerLinkActiveOptions]="{ exact: true }"
             class="nav-link"
-            (click)="routeUi.anticipate('/')"
+            (click)="navigate('/')"
         >
             Início
         </a>
         <a
-            routerLink="/about-us"
+            routerLink="/sobre-nos"
             routerLinkActive="nav-link--active"
             class="nav-link"
-            (click)="routeUi.anticipate('/about-us')"
+            (click)="navigate('/sobre-nos')"
         >
             Sobre nós
         </a>
         <a
-            routerLink="/fleet"
+            routerLink="/frota"
             routerLinkActive="nav-link--active"
             class="nav-link"
-            (click)="routeUi.anticipate('/fleet')"
+            (click)="navigate('/frota')"
         >
             Frota
         </a>
     </nav>
 
+    <div class="header__actions">
+        <button
+            type="button"
+            class="menu-toggle"
+            [class.menu-toggle--open]="menuOpen()"
+            [attr.aria-expanded]="menuOpen()"
+            aria-controls="mobile-nav"
+            [attr.aria-label]="menuOpen() ? 'Fechar menu de navegação' : 'Abrir menu de navegação'"
+            (click)="toggleMenu()"
+        >
+            <span class="menu-toggle__bar" aria-hidden="true"></span>
+            <span class="menu-toggle__bar" aria-hidden="true"></span>
+            <span class="menu-toggle__bar" aria-hidden="true"></span>
+        </button>
+
+        <button
+            type="button"
+            class="theme-toggle"
+            (click)="theme.toggle()"
+            [attr.aria-label]="theme.isDark() ? 'Ativar modo claro' : 'Ativar modo escuro'"
+        >
+            @if (theme.isDark()) {
+                <svg class="theme-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" />
+                    <line x1="12" y1="2" x2="12" y2="5" />
+                    <line x1="12" y1="19" x2="12" y2="22" />
+                    <line x1="2" y1="12" x2="5" y2="12" />
+                    <line x1="19" y1="12" x2="22" y2="12" />
+                    <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+                    <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+                    <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+                    <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+                </svg>
+            } @else {
+                <svg class="theme-toggle__icon theme-toggle__icon--filled" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z" />
+                </svg>
+            }
+        </button>
+    </div>
+</header>
+
+@if (menuOpen()) {
     <button
         type="button"
-        class="theme-toggle"
-        (click)="theme.toggle()"
-        [attr.aria-label]="theme.isDark() ? 'Ativar modo claro' : 'Ativar modo escuro'"
-    >
-        @if (theme.isDark()) {
-            <svg class="theme-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="4" />
-                <line x1="12" y1="2" x2="12" y2="5" />
-                <line x1="12" y1="19" x2="12" y2="22" />
-                <line x1="2" y1="12" x2="5" y2="12" />
-                <line x1="19" y1="12" x2="22" y2="12" />
-                <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
-                <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
-                <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
-                <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
-            </svg>
-        } @else {
-            <svg class="theme-toggle__icon theme-toggle__icon--filled" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z" />
-            </svg>
-        }
-    </button>
-</header>
+        class="mobile-nav__backdrop"
+        aria-label="Fechar menu"
+        (click)="closeMenu()"
+    ></button>
+
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navegação mobile">
+        <a
+            routerLink="/"
+            routerLinkActive="mobile-nav__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="mobile-nav__link"
+            (click)="navigate('/')"
+        >
+            Início
+        </a>
+        <a
+            routerLink="/sobre-nos"
+            routerLinkActive="mobile-nav__link--active"
+            class="mobile-nav__link"
+            (click)="navigate('/sobre-nos')"
+        >
+            Sobre nós
+        </a>
+        <a
+            routerLink="/frota"
+            routerLinkActive="mobile-nav__link--active"
+            class="mobile-nav__link"
+            (click)="navigate('/frota')"
+        >
+            Frota
+        </a>
+    </nav>
+}
