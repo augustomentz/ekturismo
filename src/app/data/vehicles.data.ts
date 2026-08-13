@@ -54,8 +54,31 @@ export const VEHICLES: Vehicle[] = [
       'Porta automática',
     ],
   },
-  {
+  { 
     id: '3',
+    slug: 'spin-2018',
+    name: 'Spin 2018',
+    image: 'fleet/spin_2018/spin_1.jpg',
+    images: [
+      'fleet/spin_2018/spin_1.jpg',
+      'fleet/spin_2018/spin_2.jpg',
+      'fleet/spin_2018/spin_3.jpg',
+      'fleet/spin_2018/spin_4.jpg',
+      'fleet/spin_2018/spin_5.jpg',
+    ],
+    description:
+      'Spin 2018 com excelente conforto para viagens e fretamentos.',
+    longDescription:
+      'A Spin 2018 é indicada para viagens executivas, receptivos e traslados, oferecendo conforto e tecnologia para grupos reduzidos.',
+    capacity: 5,
+    year: 2018,
+    features: [
+      'Ar-condicionado',
+      'Bagageiro Grande'
+    ],
+  },
+  {
+    id: '4',
     slug: 'sprinter-executiva',
     name: 'Sprinter Executiva 2017',
     image: 'fleet/sprinter_exec/sprinter_exec_1.jpg',
@@ -82,7 +105,7 @@ export const VEHICLES: Vehicle[] = [
     ],
   },
   {
-    id: '4',
+    id: '5',
     slug: 'onibus-truck',
     name: 'Ônibus Truck 2004',
     image: 'fleet/truck_2004/truck_2004_1.jpg',
@@ -107,7 +130,7 @@ export const VEHICLES: Vehicle[] = [
     ],
   },
   {
-    id: '5',
+    id: '6',
     slug: 'micro-onibus-semi-leito',
     name: 'Micro Ônibus Semi Leito 2014',
     image: 'fleet/micro_semi/micro_semi_1.jpg',
@@ -132,7 +155,7 @@ export const VEHICLES: Vehicle[] = [
     ],
   },
   {
-    id: '6',
+    id: '7',
     slug: 'sprinter-03',
     name: 'Sprinter 03',
     image: 'fleet/sprinter/sprinter_1.jpg',
@@ -154,7 +177,7 @@ export const VEHICLES: Vehicle[] = [
     ],
   },
   {
-    id: '7',
+    id: '8',
     slug: 'micro-onibus-05',
     name: 'Micro Ônibus 05',
     image: 'fleet/micro_05/micro_05_1.jpg',
@@ -176,7 +199,7 @@ export const VEHICLES: Vehicle[] = [
     ],
   },
   {
-    id: '8',
+    id: '9',
     slug: 'onibus-busscar-01',
     name: 'Ônibus Busscar 01',
     image: 'fleet/busscar/busscar_1.jpg',
@@ -199,7 +222,7 @@ export const VEHICLES: Vehicle[] = [
     ],
   },
   {
-    id: '9',
+    id: '10',
     slug: 'onibus-viale-04',
     name: 'Ônibus Viale 04',
     image: 'fleet/viale/viale_1.jpg',
@@ -222,7 +245,7 @@ export const VEHICLES: Vehicle[] = [
     ],
   },
   {
-    id: '10',
+    id: '11',
     slug: 'onibus-escolar-02',
     name: 'Ônibus Escolar 02',
     image: 'fleet/escolar/escolar_1.jpg',
